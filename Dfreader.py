@@ -6,6 +6,7 @@ print(sys.version)
 newschema="lb_income_band long ,ib_lb int , ib_up int"
 incomeBandDf=spark.read.schema(newschema).option("sep","|").format('csv').load('/FileStore/tables/retailer/data/income_band.dat')
 incomeBandDf.printSchema()
+print("this is from second branch")
 
 # COMMAND ----------
 
